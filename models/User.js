@@ -34,6 +34,9 @@ const userSchema = new mongoose.Schema({
     {
       courseCode: { type: String },
       courseTitle: { type: String },
+      time: { type: String },
+      days: [{ type: String }],
+      room: { type: String },
       section: { type: String },
       faculty: { type: String },
     },
