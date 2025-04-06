@@ -69,3 +69,25 @@ exports.updatePassword = async (req, res) => {
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };
+
+// Get User Profile
+exports.getProfile = async (req, res) => {
+  try {
+    const userId = req.user.userId; // Extract user ID from authenticated token
+
+    // Find the user by ID
+    const user = await User.findById(userId).select("-password"); // Exclude the password field
+
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    res.json({
+      message: "Profile retrieved successfully",
+      user, // Return the user data
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Server error", error: error.message });
+  }
+};
