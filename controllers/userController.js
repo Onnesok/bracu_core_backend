@@ -82,9 +82,34 @@ exports.getProfile = async (req, res) => {
       return res.status(404).json({ message: "User not found" });
     }
 
+    // Return the user data in the same format as the login response
     res.json({
       message: "Profile retrieved successfully",
-      user, // Return the user data
+      userId: user._id,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      gsuite: user.gsuite,
+      phoneNumber: user.phoneNumber,
+      studentId: user.studentId,
+      department: user.department,
+      gender: user.gender,
+      admission_year: user.admission_year,
+      profilePicture: user.profilePicture,
+      bio: user.bio,
+      currentAddress: user.currentAddress,
+      permanentAddress: user.permanentAddress,
+      bloodGroup: user.bloodGroup,
+      emergencyContact: user.emergencyContact,
+      cgpa: user.cgpa,
+      completedCredits: user.completedCredits,
+      totalCredits: user.totalCredits,
+      role: user.role,
+      accountVerified: user.accountVerified,
+      studentIdImages: user.studentIdImages,
+      clubMemberships: user.clubMemberships,
+      ongoingCourses: user.ongoingCourses,
+      registeredDevices: user.registeredDevices,
+      lastLogin: user.lastLogin,
     });
   } catch (error) {
     console.error(error);
