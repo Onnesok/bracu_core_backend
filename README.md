@@ -59,15 +59,76 @@ npm start
   Request Body:
   ```json
   {
-    "firstName": "John",
-    "lastName": "Doe",
-    "gsuite": "john.doe@bracu.ac.bd",
-    "phoneNumber": "0123456789",
-    "studentId": "123456",
-    "department": "CSE",
-    "gender": "Male",
-    "password": "Password here"
-  }
+  "firstName": "John",
+  "lastName": "Doe",
+  "gsuite": "test.account@g.bracu.ac.bd",
+  "phoneNumber": "0123456789",
+  "studentId": "12345678",
+  "department": "CSE",
+  "gender": "Male",
+  "password": "password here",
+  "admission_year": "spring22",
+  "profilePicture": "https://decisionsystemsgroup.github.io/workshop-html/img/john-doe.jpg",
+  "bio": "Passionate about AI and Robotics.",
+  "currentAddress": "Mirpur, Dhaka",
+  "permanentAddress": "Chattogram",
+  "bloodGroup": "A+",
+  "emergencyContact": {
+    "name": "Mr bhoot",
+    "relation": "Brother",
+    "phoneNumber": "01987654321"
+  },
+  "cgpa": 3.85,
+  "completedCredits": 90,
+  "totalCredits": 136,
+  "role": "Student",
+  "accountVerified": true,
+  "studentIdImages": {
+    "front": "https://i.fbcd.co/products/resized/resized-750-500/44-32586d03d0647878c6ef48e35b1c7f313f5551d92b0b3fbb1c920f18f3d2ecef.jpg",
+    "back": "https://i.fbcd.co/products/resized/resized-750-500/44-32586d03d0647878c6ef48e35b1c7f313f5551d92b0b3fbb1c920f18f3d2ecef.jpg"
+  },
+  "clubMemberships": ["ROBU", "IEEE BRACU"],
+  "ongoingCourses": [
+    {
+      "courseCode": "CSE422",
+      "courseTitle": "Artificial intelligence",
+      "time": "10:00 AM - 11:30 AM",
+      "days": ["Monday", "Wednesday"],
+      "room": "10A-12C",
+      "section": "03",
+      "faculty": "SWK"
+    },
+    {
+      "courseCode": "CSE471",
+      "courseTitle": "System Design",
+      "time": "10:00 AM - 11:30 AM",
+      "days": ["Monday", "Wednesday"],
+      "room": "10A-12C",
+      "section": "01",
+      "faculty": "AQU"
+    },
+    {
+      "courseCode": "CSE460",
+      "courseTitle": "VLSI Design",
+      "time": "10:00 AM - 11:30 AM",
+      "days": ["Monday", "Wednesday"],
+      "room": "10A-12C",
+      "section": "07",
+      "faculty": "TBA"
+    },
+    {
+      "courseCode": "CSE341",
+      "courseTitle": "MicroProcessor",
+      "time": "10:00 AM - 11:30 AM",
+      "days": ["Monday", "Wednesday"],
+      "room": "10A-12C",
+      "section": "06",
+      "faculty": "LHK"
+    }
+  ],
+  "registeredDevices": ["Samsung Galaxy S23"],
+  "lastLogin": "2025-03-31T10:15:00Z"
+}
   ```
 - **Login User:** `POST /api/users/login`  
   Request Body:
@@ -82,10 +143,76 @@ npm start
   Request Body (any field can be updated):
   ```json
   {
-    "firstName": "Jane",
-    "lastName": "Doe",
-    "phoneNumber": "0198765432"
-  }
+  "firstName": "John",
+  "lastName": "Doe",
+  "gsuite": "test.account@g.bracu.ac.bd",
+  "phoneNumber": "0123456789",
+  "studentId": "12345678",
+  "department": "CSE",
+  "gender": "Male",
+  "password": "password here",
+  "admission_year": "spring22",
+  "profilePicture": "https://decisionsystemsgroup.github.io/workshop-html/img/john-doe.jpg",
+  "bio": "Passionate about AI and Robotics.",
+  "currentAddress": "Mirpur, Dhaka",
+  "permanentAddress": "Chattogram",
+  "bloodGroup": "A+",
+  "emergencyContact": {
+    "name": "Mr bhoot",
+    "relation": "Brother",
+    "phoneNumber": "01987654321"
+  },
+  "cgpa": 3.85,
+  "completedCredits": 90,
+  "totalCredits": 136,
+  "role": "Student",
+  "accountVerified": true,
+  "studentIdImages": {
+    "front": "https://i.fbcd.co/products/resized/resized-750-500/44-32586d03d0647878c6ef48e35b1c7f313f5551d92b0b3fbb1c920f18f3d2ecef.jpg",
+    "back": "https://i.fbcd.co/products/resized/resized-750-500/44-32586d03d0647878c6ef48e35b1c7f313f5551d92b0b3fbb1c920f18f3d2ecef.jpg"
+  },
+  "clubMemberships": ["ROBU", "IEEE BRACU"],
+  "ongoingCourses": [
+    {
+      "courseCode": "CSE422",
+      "courseTitle": "Artificial intelligence",
+      "time": "10:00 AM - 11:30 AM",
+      "days": ["Monday", "Wednesday"],
+      "room": "10A-12C",
+      "section": "03",
+      "faculty": "SWK"
+    },
+    {
+      "courseCode": "CSE471",
+      "courseTitle": "System Design",
+      "time": "10:00 AM - 11:30 AM",
+      "days": ["Monday", "Wednesday"],
+      "room": "10A-12C",
+      "section": "01",
+      "faculty": "AQU"
+    },
+    {
+      "courseCode": "CSE460",
+      "courseTitle": "VLSI Design",
+      "time": "10:00 AM - 11:30 AM",
+      "days": ["Monday", "Wednesday"],
+      "room": "10A-12C",
+      "section": "07",
+      "faculty": "TBA"
+    },
+    {
+      "courseCode": "CSE341",
+      "courseTitle": "MicroProcessor",
+      "time": "10:00 AM - 11:30 AM",
+      "days": ["Monday", "Wednesday"],
+      "room": "10A-12C",
+      "section": "06",
+      "faculty": "LHK"
+    }
+  ],
+  "registeredDevices": ["Samsung Galaxy S23"],
+  "lastLogin": "2025-03-31T10:15:00Z"
+}
   ```
 
 ### **Testing the API**
