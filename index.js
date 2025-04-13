@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
 const testRoutes = require("./routes/testRoutes");
+const courseRoutes = require("./routes/courseRoutes");
+const thesisRoutes = require("./routes/thesisRoutes");
 
 dotenv.config();
 const app = express();
@@ -13,6 +15,8 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/test", testRoutes);
+app.use("/api/courses", courseRoutes);
+app.use("/api/thesis", thesisRoutes);
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)

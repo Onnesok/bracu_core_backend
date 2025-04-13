@@ -42,6 +42,9 @@ exports.register = async (req, res) => {
     let existingUser = await User.findOne({ gsuite });
     if (existingUser) return res.status(400).json({ message: "GSuite already registered" });
 
+    existingUser = await User.findOne({ phoneNumber });
+    if (existingUser) return res.status(400).json({ message: "Phone number already registered" });
+    
     existingUser = await User.findOne({ studentId });
     if (existingUser) return res.status(400).json({ message: "Student ID already registered" });
 
