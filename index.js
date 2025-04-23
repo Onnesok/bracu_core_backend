@@ -7,6 +7,7 @@ const testRoutes = require("./routes/testRoutes");
 const courseRoutes = require("./routes/courseRoutes");
 const thesisRoutes = require("./routes/thesisRoutes");
 const facultyRoutes = require("./routes/facultyconsultation_route");
+const stConsultationRoutes = require("./routes/stconsultation_route");
 
 dotenv.config();
 const app = express();
@@ -19,6 +20,7 @@ app.use("/api/test", testRoutes);
 app.use("/api/courses", courseRoutes);
 app.use("/api/thesis", thesisRoutes);
 app.use("/api/faculty", facultyRoutes);
+app.use("/api/stconsultation", stConsultationRoutes);
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
